@@ -1,126 +1,143 @@
-🌊 Monitoramento de Enchentes: Sistema Inteligente com ESP32 e Node-RED ☔
-Descrição do Projeto
-O Monitoramento de Enchentes é um sistema protótipo desenvolvido para acompanhar em tempo real as condições ambientais que podem levar a inundações. Utilizando um ESP32 como dispositivo de borda (Edge Computing), o projeto coleta dados de sensores de nível da água (ultrassônico), umidade do solo e volume de chuva (simulado por um potenciômetro).
 
-Os dados são transmitidos via MQTT para um broker e, em seguida, processados e visualizados em um Dashboard interativo no Node-RED. Este projeto demonstra como a Internet das Coisas (IoT) e o Edge Computing podem ser aplicados para prever riscos e otimizar a gestão de emergências.
+# 🌊 Monitoramento de Enchentes: Sistema Inteligente com ESP32 e Node-RED ☔
 
-Objetivo
-O principal objetivo do sistema de Monitoramento de Enchentes é fornecer informações cruciais para a prevenção e resposta a inundações, visando:
+## 📑 Descrição do Projeto
 
-Detecção Precoce: Identificar condições de risco de enchente antes que se tornem críticas.
-Monitoramento em Tempo Real: Oferecer uma visão constante dos parâmetros ambientais relevantes.
-Visualização Clara: Apresentar os dados de forma intuitiva através de um dashboard interativo.
-Alerta Automatizado: Disparar alertas visuais quando os limiares de risco são atingidos.
-Demonstrar IoT e Edge Computing: Aplicar conceitos modernos de tecnologia em um problema real.
-Funcionalidades
-Medição de Nível da Água: Sensor ultrassônico mede a distância até a superfície da água, inferindo o nível.
-Detecção de Umidade do Solo: Sensor lê a umidade do solo, indicando sua saturação.
-Simulação de Volume de Chuva: Um potenciômetro simula a intensidade da precipitação.
-Processamento de Borda (Edge Computing): O ESP32 processa os dados dos sensores e aplica lógicas de alerta básicas localmente antes de enviar os dados.
-Comunicação MQTT: Transmissão de dados leve e eficiente para o broker MQTT.
-Dashboard Interativo: Visualização em tempo real de todos os parâmetros e status de alerta no Node-RED.
-Alertas Visuais: LED no ESP32 e mensagens no dashboard indicam risco de enchente.
-Monitoramento Serial: Saída de dados via Monitor Serial para depuração e validação.
-Requisitos do Sistema
-Hardware:
-ESP32 DevKit C (ou similar compatível)
-Sensor Ultrassônico HC-SR04
-Sensor de Umidade do Solo
-Potenciômetro (para simulação de chuva)
-LED (para indicação de alerta)
-Protoboard e fios para conexões
-Fonte de energia (via USB ou externa)
-Software:
-Arduino IDE
-Node-RED instalado (ou versão online, ex: cloud.nodered.org para testes)
-Broker MQTT (ex: broker.hivemq.com para testes, ou um local como Mosquitto)
-Dependências (Arduino IDE):
-WiFi.h (padrão para ESP32)
-PubSubClient.h (para comunicação MQTT)
-ArduinoJson.h (para serialização de dados JSON)
-Dependências (Node-RED):
-node-red-dashboard (paleta para criar o dashboard)
-Instruções de Uso
-Passo 1: Conexões de Hardware
-Certifique-se de que o ESP32 e os sensores estejam conectados conforme o código. Um exemplo básico:
+Este projeto é um sistema de **Monitoramento de Enchentes** que acompanha, em tempo real, condições ambientais que podem indicar risco de inundações. Utilizando um **ESP32** como dispositivo de borda (**Edge Computing**), ele coleta dados de:
 
-Sensor Ultrassônico HC-SR04:
-VCC → 5V (ou 3.3V, dependendo do modelo do sensor e da placa) do ESP32
-GND → GND do ESP32
-Trig → Pino Digital 13 do ESP32
-Echo → Pino Digital 14 do ESP32
-Sensor de Umidade do Solo:
-VCC → 3.3V do ESP32
-GND → GND do ESP32
-A0 (Saída Analógica) → Pino Analógico 34 do ESP32
-Potenciômetro (Simulação de Chuva):
-VCC → 3.3V do ESP32
-GND → GND do ESP32
-Pino Central → Pino Analógico 32 do ESP32
-LED de Alerta:
-Ânodo (perna longa) → Pino Digital 22 do ESP32 (via resistor de 220 Ohm)
-Cátodo (perna curta) → GND do ESP32
-Passo 2: Configuração do Código (Arduino IDE)
-Abra a IDE do Arduino.
-Copie e cole o código fornecido para o ESP32.
-Ajuste as credenciais Wi-Fi:
-C++
+- **Nível da água** (sensor ultrassônico)
+- **Umidade do solo**
+- **Volume de chuva** (simulado por um potenciômetro)
 
+Os dados são enviados via **MQTT** para um broker, sendo processados e visualizados em um **dashboard interativo no Node-RED**. Este projeto demonstra como **IoT e Edge Computing** podem ser aplicados para prever riscos e auxiliar na gestão de emergências.
+
+## 🎯 Objetivos
+
+- ⚠️ **Detecção Precoce:** Identificar condições de risco antes que se tornem críticas.
+- 🔍 **Monitoramento em Tempo Real:** Acompanhar os parâmetros ambientais constantemente.
+- 📊 **Visualização Clara:** Exibir dados de forma intuitiva em um dashboard.
+- 🚨 **Alertas Automatizados:** Emitir alertas visuais quando os níveis de risco são atingidos.
+- 🌐 **Aplicação de IoT e Edge Computing:** Utilizar tecnologias atuais para resolver problemas reais.
+
+## 🔥 Funcionalidades
+
+- 📏 **Medição de Nível da Água:** Via sensor ultrassônico.
+- 🌱 **Medição de Umidade do Solo:** Através de sensor capacitivo ou resistivo.
+- 🌧️ **Simulação de Volume de Chuva:** Controlado por um potenciômetro.
+- 🧠 **Edge Computing:** O ESP32 processa dados localmente, aplicando lógicas de alerta.
+- 🔗 **Comunicação via MQTT:** Envio eficiente de dados.
+- 🖥️ **Dashboard Node-RED:** Monitoramento visual dos dados.
+- 🚦 **Alertas Visuais:** LED no ESP32 e notificações no dashboard.
+- 🔧 **Saída Serial:** Para monitoramento e depuração.
+
+## 🧰 Requisitos do Sistema
+
+### 🔌 Hardware
+- ✅ ESP32 DevKit C (ou equivalente)
+- ✅ Sensor Ultrassônico HC-SR04
+- ✅ Sensor de Umidade do Solo
+- ✅ Potenciômetro (simulação de chuva)
+- ✅ LED (alerta)
+- ✅ Protoboard e jumpers
+- ✅ Fonte de energia (USB ou externa)
+
+### 💻 Software
+- **Arduino IDE**
+- **Node-RED** (local ou cloud: https://flowfuse.com ou https://nodered.org/)
+- **Broker MQTT** (ex.: https://broker.hivemq.com ou local como Mosquitto)
+
+### 📦 Bibliotecas Arduino IDE
+- `WiFi.h` (conexão Wi-Fi)
+- `PubSubClient.h` (protocolo MQTT)
+- `ArduinoJson.h` (serialização JSON)
+
+### 📦 Paletas Node-RED
+- `node-red-dashboard` (para criar o dashboard)
+
+## 🔧 Instruções de Uso
+
+### 🛠️ Passo 1: Montagem do Hardware
+
+| Componente               | ESP32                                |
+|--------------------------|--------------------------------------|
+| **HC-SR04**              | VCC → 5V / 3.3V<br>GND → GND<br>Trig → D13<br>Echo → D14 |
+| **Umidade do Solo**      | VCC → 3.3V<br>GND → GND<br>A0 → A34 |
+| **Potenciômetro (Chuva)**| VCC → 3.3V<br>GND → GND<br>Pino Central → A32 |
+| **LED (Alerta)**         | Ânodo → D22 (via resistor 220Ω)<br>Cátodo → GND |
+
+### 💻 Passo 2: Código no Arduino IDE
+
+1. Abra a Arduino IDE.
+2. Insira o código do ESP32.
+3. Configure o Wi-Fi:
+
+```cpp
 const char* ssid = "SEU_SSID_WIFI";
 const char* password = "SUA_SENHA_WIFI";
-(Para Wokwi, ssid = "Wokwi-GUEST" e password = "" funcionam automaticamente.)
-Ajuste as configurações MQTT (se necessário):
-C++
+// No Wokwi → ssid = "Wokwi-GUEST", password = "";
+```
 
-const char* mqtt_broker = "broker.hivemq.com"; // Ou o IP/endereço do seu broker
+4. Configure o broker MQTT:
+
+```cpp
+const char* mqtt_broker = "broker.hivemq.com";
 const int mqtt_port = 1883;
 const char* mqtt_client_id = "ESP32_FloodMonitor";
 const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
-Selecione a placa ESP32 Dev Module (ou a sua placa ESP32 específica) e a porta COM correta.
-Faça o upload do código para o ESP32.
-Passo 3: Configuração do Node-RED
-Abra seu Node-RED (geralmente em http://localhost:1880/).
-Instale a paleta node-red-dashboard se ainda não tiver:
-Menu (três linhas) -> Manage palette -> Install -> Procure por node-red-dashboard.
-Importe o fluxo do Node-RED (se tiver um arquivo .json do fluxo) ou crie-o manualmente conforme as instruções anteriores:
-Um nó mqtt in (conectado ao broker.hivemq.com e ao tópico sensor/monitoramento_enchente, com saída a parsed JSON object).
-Um nó function para extrair e ramificar os dados.
-Nós ui_gauge para Nível da Água, Umidade do Solo, Volume de Chuva.
-Um nó ui_text para Status do Alerta.
-Um nó ui_chart para Histórico de Nível da Água.
-Certifique-se de que as saídas do nó function estejam conectadas corretamente aos respectivos widgets do dashboard.
-Clique em "Deploy" para ativar o fluxo.
-Passo 4: Testar o Sistema
-Inicie a simulação no Wokwi ou ligue seu ESP32 físico.
-Monitore a saída serial do ESP32 para verificar a conexão Wi-Fi e a publicação MQTT.
-Acesse o dashboard do Node-RED no seu navegador (geralmente http://localhost:1880/ui).
-No Wokwi: Ajuste os sliders dos sensores (distância, umidade do solo, potenciômetro) para simular diferentes condições.
-Observe o dashboard se atualizar em tempo real, exibindo os valores dos sensores, o status do alerta e o histórico do nível da água. O LED no ESP32 também deve acender quando as condições de alerta forem atingidas.
-Diagrama do Sistema
-(Aqui você inseriria o diagrama que geramos para o seu projeto, ou um link para ele no Draw.io/diagrams.net)
+```
 
-(Exemplo: Substitua com o link real da sua imagem)
+5. Selecione **"ESP32 Dev Module"** como placa.
+6. Faça o upload do código.
 
-Dashboard no Node-RED
-(Aqui você inseriria uma captura de tela do seu dashboard no Node-RED)
+### 🔗 Passo 3: Configuração no Node-RED
 
-(Exemplo: Substitua com o link real da sua imagem)
+1. Abra Node-RED (geralmente: http://localhost:1880).
+2. Instale a paleta `node-red-dashboard`:
 
-Fluxo do Node-RED
-(Aqui você inseriria uma captura de tela do seu fluxo no Node-RED)
+> Menu → Manage palette → Install → Pesquisar por `node-red-dashboard`
 
-(Exemplo: Substitua com o link real da sua imagem)
+3. Configure os nós:
 
-Captura de Tela do Projeto e Link
-Link Wokwi: https://wokwi.com/projects/429612764102574081
-Captura de Tela: (Exemplo: Substitua com uma captura de tela do seu Wokwi)
-Vídeo do Projeto
-(Aqui você inseriria o link para um vídeo demonstrativo do projeto, se tiver um. Mantenha o formato http://www.youtube.com/0 como placeholder se não tiver um link real ainda.)
+- **mqtt in**: 
+  - Broker: `broker.hivemq.com`
+  - Tópico: `sensor/monitoramento_enchente`
+- **function**: Processamento dos dados recebidos.
+- **ui_gauge**: 
+  - Nível da Água
+  - Umidade do Solo
+  - Volume de Chuva
+- **ui_text**: Status do Alerta
+- **ui_chart**: Histórico de Nível da Água
 
-Link para o Vídeo Demonstrativo (Exemplo: Substitua com o link real do seu vídeo)
+4. Clique em **"Deploy"** para rodar o fluxo.
 
-Integrantes
-Luiz Gustavo Araújo de Lima e Silva - RM560110
-Arthur Silva - RM560771
-Pedro Estevam - RM560642
-Matheus Siroma - RM560248
+### 🔍 Passo 4: Teste e Monitoramento
+
+- 🏗️ **No Wokwi:** Use sliders para simular valores dos sensores.
+- ⚙️ **No físico:** Observe a atualização no Dashboard e no LED de alerta.
+- 🔗 Dashboard → http://localhost:1880/ui (ou endereço do seu servidor)
+
+## 🗺️ Diagrama do Sistema
+
+> *(Insira aqui o link do diagrama no Draw.io, Excalidraw ou uma imagem do projeto)*
+
+## 📊 Dashboard Node-RED
+
+> *(Insira uma captura de tela do dashboard funcionando)*
+
+## 🔁 Fluxo do Node-RED
+
+> *(Insira uma captura do fluxo Node-RED ou link para o JSON do fluxo)*
+
+## 🔗 Captura de Tela e Link do Projeto
+
+- 🌐 Projeto no Wokwi: [Clique aqui](https://wokwi.com/projects/429612764102574081)
+- 🖼️ Captura de Tela: *(Adicione aqui)*
+
+## 🎥 Vídeo do Projeto
+
+> *(Adicione o link do vídeo demonstrativo no YouTube ou outra plataforma)*
+
+## 👥 Integrantes do Projeto
+
+- Luiz Gustavo Araújo de Lima e Silva — RM560110  
