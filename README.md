@@ -119,8 +119,8 @@ const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
 
 ##  Diagrama do Sistema
 
-> *(![Imagem do WhatsApp de 2025-06-01 à(s) 21 55 46_70db3ead](https://github.com/user-attachments/assets/f367510d-3efe-4788-9412-a00490ed75a7)
-)*
+> *![Texto Alternativo da Imagem](![Imagem do WhatsApp de 2025-06-01 à(s) 21 55 46_c7879f3c](https://github.com/user-attachments/assets/53ab2b47-8d40-4e94-92bb-9581102412be)
+){width="50%"}*
 
 ##  Dashboard Node-RED
 
