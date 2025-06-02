@@ -119,25 +119,27 @@ const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
 
 ## 🗺️ Diagrama do Sistema
 
-> *(Insira aqui o link do diagrama no Draw.io, Excalidraw ou uma imagem do projeto)*
+> *()*
 
 ## 📊 Dashboard Node-RED
 
-> *(Insira uma captura de tela do dashboard funcionando)*
+> *()*
 
 ## 🔁 Fluxo do Node-RED
 
-> *(Insira uma captura do fluxo Node-RED ou link para o JSON do fluxo)*
+> *()*
 
 ## 🔗 Captura de Tela e Link do Projeto
 
-- 🌐 Projeto no Wokwi: [Clique aqui](https://wokwi.com/projects/429612764102574081)
-- 🖼️ Captura de Tela: *(Adicione aqui)*
+- 🌐 Projeto no Wokwi: [Clique aqui](https://wokwi.com/projects/432395535361548289)
+- 🖼️ Captura de Tela: *()*
 
 ## 🎥 Vídeo do Projeto
 
-> *(Adicione o link do vídeo demonstrativo no YouTube ou outra plataforma)*
+> *()*
 
 ## 👥 Integrantes do Projeto
 
 - Luiz Gustavo Araújo de Lima e Silva — RM560110  
+- Leonardo Luiz Jardim Queijo - RM 559842
+- Lucas Almeida Villar - RM560005
