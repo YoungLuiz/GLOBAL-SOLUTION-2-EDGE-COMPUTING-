@@ -120,27 +120,27 @@ const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
 ##  Diagrama do Sistema
 
 > *(![Imagem do WhatsApp de 2025-06-01 à(s) 21 55 46_c7879f3c](https://github.com/user-attachments/assets/53ab2b47-8d40-4e94-92bb-9581102412be)
-)
+
 
 ##  Dashboard Node-RED
 
 > *(![image](https://github.com/user-attachments/assets/fe6fade6-33d1-48d6-a5aa-9c667542c870)
-)*
+
 
 ##  Fluxo do Node-RED
 
 > *(![image](https://github.com/user-attachments/assets/0e603e1f-a9df-407c-96d4-7d69acfda8a1)
-)*
+
 
 ##  Captura de Tela e Link do Projeto
 
 -  Projeto no Wokwi: [Clique aqui](https://wokwi.com/projects/432395535361548289)
 -  Captura de Tela: *(![image](https://github.com/user-attachments/assets/708ade8e-4e2a-49e6-aa98-8c36c44af3ae)
-)*
+
 
 ##  Vídeo do Projeto
 
-> *()*
+> [*()*](https://youtu.be/vTnZ1u8mMCM)
 
 ##  Integrantes do Projeto
 
