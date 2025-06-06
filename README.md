@@ -140,7 +140,7 @@ const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
 
 ##  Vídeo do Projeto
 
-> [*()*](https://youtu.be/vTnZ1u8mMCM)
+> [*(VIDEO DO PROJETO)*](https://youtu.be/vTnZ1u8mMCM)
 
 ##  Integrantes do Projeto
 
