@@ -135,7 +135,8 @@ const char* mqtt_topic_publish = "sensor/monitoramento_enchente";
 ##  Captura de Tela e Link do Projeto
 
 -  Projeto no Wokwi: [Clique aqui](https://wokwi.com/projects/432395535361548289)
--  Captura de Tela: *(![image](!(https://github.com/user-attachments/assets/d4b50cdf-6841-4a49-8f65-86ce71a17a09)
+-  Captura de Tela: *![image](https://github.com/user-attachments/assets/91804038-4dc6-42d2-88af-e7ec35a668e1)
+
 )
 
 
